@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fortress Universe Studio</title>
+    <link rel="stylesheet" href="FUStyle.css">
+    <script src="https://kit.fontawesome.com/8daa08efa2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="head__banner">
+        <img src="images/baner.png" class="banner" alt="banner">
+    </header>
+    <nav id="navbar">
+            <a class="navbar__logo"><i class="fa-solid fa-film"></i> <i>FU Studio</i></a>
+            <div class="navbar__buttons">
+                <span class="navbar__border"></span>
+                <a href="upcoming.html" class="navbar__links">News</a>
+                <span class="navbar__border"></span>
+                <a href="upcoming.html" class="navbar__links">Forum</a>
+                <span class="navbar__border"></span>
+                <a href="upcoming.html" class="navbar__links">Characters</a>
+                <span class="navbar__border"></span>
+                <a class="navbar__links" id="log__in">Log in</a>
+                <span class="navbar__border"></span>
+            </div>
+    </nav>
+    <!--MAIN-->
+    <main>
+        <div class="content">
+            <img src="images/pic1.svg" alt="pic" id="main__img">
+            <section class="opening">
+                    <h1 class="main__welcome">WELCOME TO FORTRESS UNIVERSE STUDIO</h1>
+                    <span  class="main__span"></span>
+                    <video class="main__video" controls autoplay muted>
+                        <source src="images/PM.mp4" type="video/mp4">
+                        Display failed.
+                    </video>
+                    <h2 class="basic__info">Who are we?</h2>
+                    <span class="spans main__span"></span>
+                    <p>FU Studio was opened in 2020 by ambitious group of professional animators.
+                        We do our best to deliver you the highest quality content. That is our main
+                        goal, but we also work in areas like clothing and gastronomy. Our company is
+                        growing really fast. Soon we will conquer the world with our top-shelf products!</p>
+            </section>
+            <aside>
+                [advertisement]
+            </aside>
+            <section class="projects__title">
+                <h1 class="projects">Check our latest projects</h1>
+                <span class="projects__span"></span>
+            </section>
+            <div class="carousel__container">
+                <button class="left"><</button>
+                <div class="carousel__overflow">
+                    <div class="carousel">
+                        <div class="carousel__item item__style" id="item1">Demovirus</div>
+                        <div class="carousel__item item__style" id="item2">Kitchen Nightmares</div>
+                        <div class="carousel__item item__style" id="item3">Better Call Saul</div>
+                        <div class="carousel__item item__style" id="item4">Talent Show!</div>
+                        <div class="carousel__item item__style" id="item5">FNAF Cameo</div>
+                    </div>
+                </div>
+                <button class="right">></button>
+            </div>
+
+            <section class="socials">
+                <h2 class="socials__h2">Follow us</h2>
+                <ul class="socials__list">
+                    <li class="socials__item">
+                        <a href="https://www.youtube.com/@fortressuniverse2818"
+                           class="socials__logo" id="youtube" target="_blank"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="https://www.youtube.com/@fortressuniverse2818"
+                           class="socials__logo" id="discord" target="_blank"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="https://www.youtube.com/@fortressuniverse2818"
+                           class="socials__logo" id="twitter" target="_blank"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="https://www.youtube.com/@fortressuniverse2818"
+                           class="socials__logo" id="instagram" target="_blank"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <div id="popup">
+        <span class="login__exit"></span>
+        <span class="login__exit"></span>
+        <form method="post" class="login__form">
+            <label for="nickname">Nickname</label>
+            <input type="text" name="nickname" placeholder="Enter nickname" id="nickname">
+            <label for="password">Password</label>
+            <input type="text" name="password" placeholder="Enter password" id="password">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Fortress Universe Studio. All rights reserved.</p>
+    </footer>
+    <script src="FUAnimation.js"></script>
+</body>
+</html>

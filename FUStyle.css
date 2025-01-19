@@ -1,0 +1,462 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: #333333;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    max-width: 1930px;
+    width: 100%;
+    height: 333px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner {
+    filter: grayscale(20%) brightness(50%);
+    width: 100%;
+    height: 100%;
+    box-shadow: black 0 0 50px 50px;
+}
+
+nav {
+    box-sizing: border-box;
+    max-width: 1200px;
+    min-width: 900px;
+    margin-top: 20px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    z-index: 1000;
+    top: 1px;
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: #000000;
+    border-radius: 14px;
+    transition: 0.4s;
+}
+
+.navbar__logo {
+    font-size: 2rem;
+    color: #999;
+    background-image: linear-gradient(to top, orangered 0%, darkred 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    width: 185px;
+}
+
+.navbar__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+    background: #000000;
+    gap: 2.5em;
+    min-width: 555px;
+}
+
+.navbar__links {
+    text-decoration: none;
+    color: white;
+}
+.navbar__links:hover {
+    color: #b12a5b;
+    transition: all 0.4s ease;
+}
+
+.navbar__border {
+    display: block;
+    background: #444444;
+    width: 1px;
+    height: 60px;
+}
+
+/*-----------------------MAIN-----------------------------*/
+main {
+    position: relative;
+    margin-top: -80px;
+    width: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(11, minmax(140px, 200px));
+    grid-template-rows: repeat(11, 190px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1600px;
+}
+
+#main__img {
+    position: relative;
+    z-index: -1;
+    grid-row: 3/6;
+    grid-column: 7/9;
+    margin: 0;
+    object-fit: contain;
+}
+
+.opening {
+    grid-row: 3/6;
+    grid-column: 2/8;
+    background: #222222;
+    box-shadow: black 0 0 15px 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+aside {
+    grid-row: 3/6;
+    grid-column: 9/11;
+    background: #222222;
+    box-shadow: black 0 0 15px 5px;
+    color: white;
+    position: sticky;
+    top: 90px;
+    /* z-index: 10; */
+}
+
+h1.main__welcome {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    font-style: normal;
+    align-self: center;
+}
+
+.main__span {
+    width: 70%;
+    height: 1px;
+    background: #BBBBBB;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.projects__span {
+    width: 70%;
+    height: 1px;
+    background: #BBBBBB;
+    margin-top: 10px;
+    margin-left: 55px;
+}
+
+h2.basic__info {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+p {
+    margin: 10px 60px 10px 15px;
+}
+
+.spans {
+    align-self: flex-start;
+    margin-left: 15px;
+}
+
+.main__video {
+    height: auto;
+    max-width: 60%;
+    align-self: center;
+    margin-top: 15px;
+    box-shadow: black 0 0 15px 5px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 3s 5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.projects__title {
+    grid-row: 6/7;
+    grid-column: 2/5;
+    background: #222222;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    box-shadow: black 0 0 15px 5px;
+    border-radius: 10px;
+}
+
+.projects {
+    margin-left: 60px;
+    color: white;
+}
+
+.carousel__container {
+    grid-column: 2/8;
+    grid-row: 7/10;
+    /*background: #222222;*/
+    display: flex;
+    height: auto;
+    position: relative;
+}
+
+.carousel__container::before {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 85%;
+    background-image: url("images/klisza.png");
+    background-size: contain;
+    filter: grayscale(40%) brightness(50%);
+    z-index: -1;
+    border-radius: 50px;
+
+}
+.carousel__overflow {
+    overflow: hidden;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+    width: 250%;
+    height: 90%;
+    margin-left: -245px;
+}
+
+.carousel__item {
+    height: 100%;
+    min-width: calc(290px - 20px);
+    transition: 0.5s ease-in-out;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: black 0 0 15px 5px;
+}
+
+#item1 {
+    background-image: url("images/demovirus.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -240px;
+}
+
+#item2 {
+    background-image: url("images/kitchennightmares.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -110px;
+}
+
+#item3 {
+    background-image: url("images/saul.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -150px;
+}
+
+#item4 {
+    background-image: url("images/talentshow.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -50px;
+}
+
+#item5 {
+    background-image: url("images/fnaf.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item__style:hover {
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    box-shadow: white 0 0 25px 5px;
+    font-size: 2.5em;
+}
+
+.no__hover {
+    box-shadow: none;
+    color: transparent;
+}
+
+.button__left {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #FFFFAA;
+    border: none;
+    margin: 10px;
+    align-self: center;
+    z-index: 9;
+}
+
+button.left, button.right {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #FFFFAA;
+    border: none;
+    top: 50%;
+    z-index: 9;
+    align-self: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+button.left {
+    left: 10px;
+}
+button.right {
+    right: 10px;
+}
+button.left:hover {
+    background: white;
+    transition: 1s;
+}
+
+.socials {
+    grid-row: 10/11;
+    grid-column: 2/7;
+    background: #222222;
+    display: flex;
+    margin-bottom: 100px;
+    align-items: center;
+    box-shadow: 0 0 15px 5px;
+    border-radius: 10px;
+}
+
+.socials__h2 {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #FFF;
+    margin: 0 15px;
+}
+
+.socials__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+}
+
+.socials__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.socials__logo {
+    display: block;
+    height: 90%;
+    width: 110px;
+    margin: 10px 5px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#youtube {
+    background-image: url("images/youtube.png");
+}
+
+#discord {
+    background-image: url("images/discord.png");
+}
+
+#twitter {
+    background-image: url("images/x.png");
+}
+
+#instagram {
+    background-image: url("images/instagram.png");
+}
+
+/*-------------------LOGIN SECTION---------------------*/
+#popup {
+    position: absolute;
+    width: 30%;
+    height: 300px;
+    background: #222222;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+}
+
+.login__exit {
+    height: 1px;
+    width: 10px;
+    display: inline-block;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 90px;
+    background: #222222;
+}
+
+
+
+
+
